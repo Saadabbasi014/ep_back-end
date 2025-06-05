@@ -25,7 +25,7 @@ namespace ep_back_end.Controllers
             return Ok(pagedEmployees);
         }
 
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "Admin, User")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
